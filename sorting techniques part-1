@@ -16,7 +16,7 @@ def swap(i,j):
     a[i],a[j]=a[j],a[i]
 for i in range(len(a)):
     min=i
-    for j in range(i,len(a)):
+    for j in range(i+1,len(a)):
         if a[i]>a[j]:
             i=j
     swap(i,min)

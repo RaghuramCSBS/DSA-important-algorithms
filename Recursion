@@ -1,8 +1,20 @@
-#factorial for n numbers
+#1)factorial for n numbers
 def fact(i):
     if i==1:
         return 1
     return i*fact(i-1)
 factorial=fact(5)
 print(factorial)
+
+#2)reverse of array 
+def reva(l,r):
+    if l>=r:
+        return
+    swap(l,r)
+    return reva(l+1,r-1)
+def swap(l,r):
+    a[l],a[r]=a[r],a[l]
+a=[9,6,3,2,5,8,7,4,1]
+reva(0,len(a)-1)
+print(a)
 

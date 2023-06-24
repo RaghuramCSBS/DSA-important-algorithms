@@ -1,0 +1,23 @@
+#1)calculate frequency of array element that are numbers
+def hashm(n,a,p):
+    for i in a:
+        hash[i]=hash[i]+1
+n=10
+a=[1,2,2,3,3,3,4,4,4,5]
+p=5
+hash=[0,0,0,0,0,0,0,0,0,0]
+hashm(n,a,p)
+for i in range(6):
+    print(i,hash[i])
+
+#2)calculate frequency of array element that are letters
+def hashm(s,p):
+    for i in s:
+        hash[ord(i)-97]=hash[ord(i)-97]+1
+s="abacnwkfowdwajksjkesjfaejfesfesfesgeg"
+p=5
+hash=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+hashm(s,p)
+print(hash)
+for i in range(26):
+    print(chr(i+97),hash[i])

@@ -15,7 +15,7 @@ class stack:
         return self.stack[-1]
     def isempty(self):
         return len(self.stack)==0
-    def size():
+    def size(self):
         return len(self.stack)
     def traversal(self):
         for i in self.stack:

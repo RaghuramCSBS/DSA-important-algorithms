@@ -1,0 +1,25 @@
+#1)tree 
+class treenode:
+    def __init__(self,data):
+        self.data=data
+        self.children=[]
+        self.parent=None
+    def addchild(self,child):
+        child.parent=self
+        self.children.append(child)
+        
+
+
+root=treenode('eletronics')
+branch1=treenode('laptops')
+branch2=treenode('mobiles')
+root.addchild(branch1)
+root.addchild(branch2)
+print(root.data)
+print(root.parent)
+print(root.children[0].data)
+print(root.children[1].data)
+print(branch1.parent.data)
+print(branch2.parent.data)
+for i in root.children:
+    print(i.data)

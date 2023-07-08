@@ -1,4 +1,4 @@
-#merge sort:
+#1)merge sort:
 # Python program for implementation of MergeSort
 
 
@@ -64,3 +64,31 @@ if __name__ == '__main__':
 
 
 ..............................................................................................................................................................
+#2)quick_sort
+def quick_sort(arr,start,end):
+    if start<end:
+        idx=partition(arr,start,end)
+        quick_sort(arr,start,idx-1)
+        quick_sort(arr,idx+1,end)
+def partition(arr,low,high):
+    start=low+1
+    end=high
+    pivot=arr[low]
+    while True:
+        while start<=end and arr[end]>=pivot:
+            end-=1
+        while start<=end and arr[start]<=pivot:
+            start+=1
+        if start<=end:
+           arr[start],arr[end]=arr[end],arr[start]
+        else:
+            break
+    arr[low],arr[end]=arr[end],arr[low]
+    return end
+arr=[9,5,2,1,4,7,9,6,10,11,5]
+start=0
+end=len(arr)-1
+quick_sort(arr,start,end)
+for i in arr:
+    print(i,end=" ")
+

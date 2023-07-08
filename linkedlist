@@ -27,6 +27,39 @@ l.insert(20)
 l.insert(30)
 l.insert(40)
 l.printLL()
+..................................................................................................................................................................
+#1.2)onther way of creating Single linkedlist with node count
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class Linked_list:
+    def __init__(self):
+        self.head=None
+        self.noNodes=0
+    def insert(self,data):
+        newNode=Node(data)
+        newNode.next=self.head
+        self.head=newNode
+        self.noNodes+=1
+    def printLL(self):
+        current=self.head
+        while current:
+            print(current.data)
+            current=current.next
+        
+        
+l=Linked_list()
+l.insert(10)
+l.insert(20)
+l.insert(30)
+l.insert(40)
+print(l.noNodes)
+l.printLL()
+        
+        
+    
+..........................................................................................................................................................        
 
 #2)linkedlist with delete at end and insert at beginning
 class node:
